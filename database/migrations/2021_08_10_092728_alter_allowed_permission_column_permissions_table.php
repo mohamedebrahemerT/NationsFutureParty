@@ -1,0 +1,278 @@
+<?php
+
+use App\Models\Permission;
+use Illuminate\Database\Migrations\Migration;
+use Illuminate\Database\Schema\Blueprint;
+use Illuminate\Support\Facades\Schema;
+
+class AlterAllowedPermissionColumnPermissionsTable extends Migration
+{
+    /**
+     * Run the migrations.
+     *
+     * @return void
+     */
+
+    public function up()
+    {
+        Permission::where('name', 'add_clients')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_clients')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'edit_clients')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_clients')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_employees')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_employees')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'edit_employees')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_employees')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_projects')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_projects')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_projects')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_projects')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_attendance')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_attendance')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_tasks')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_tasks')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_tasks')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_tasks')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_estimates')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_estimates')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_estimates')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_estimates')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_invoices')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_invoices')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_invoices')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_invoices')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_payments')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_payments')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_payments')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_payments')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_timelogs')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_timelogs')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_timelogs')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_timelogs')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_tickets')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_tickets')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_tickets')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_tickets')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_events')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_events')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_events')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_events')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_notice')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_notice')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_notice')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_notice')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_leave')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_leave')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_leave')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_leave')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_lead')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_lead')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_lead')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_lead')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_holiday')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_holiday')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'edit_holiday')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_holiday')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_product')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_product')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'edit_product')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_product')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_expenses')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_expenses')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_expenses')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_expenses')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_contract')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_contract')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_contract')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_contract')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_asset')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_asset')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_asset')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_asset')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_client_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_client_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_client_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'delete_client_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'add_client_subcategory')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_client_subcategory')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_client_subcategory')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'delete_client_subcategory')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'add_client_contacts')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_client_contacts')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_client_contacts')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'delete_client_contacts')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'add_designation')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_designation')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_designation')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'delete_designation')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'add_department')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_department')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_department')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'delete_department')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'add_documents')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_documents')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'edit_documents')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_documents')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_leaves_taken')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'update_leaves_quota')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_employee_tasks')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_employee_projects')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_employee_timelogs')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_project_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_project_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'delete_project_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_project_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'edit_project_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_project_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_project_discussions')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_project_discussions')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_project_discussions')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_project_discussions')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'manage_discussion_category')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_project_milestones')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_project_milestones')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_project_milestones')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_project_milestones')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_project_members')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_project_members')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_project_members')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_project_members')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'view_project_rating')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_project_rating')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_project_rating')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_project_rating')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'view_project_budget')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_timelogs')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_expenses')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_tasks')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_invoices')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_burndown_chart')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_payments')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_gantt_chart')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_task_category')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_task_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_task_category')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_task_category')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_task_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_task_files')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_task_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_task_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_sub_tasks')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_sub_tasks')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_sub_tasks')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_sub_tasks')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_task_comments')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_task_comments')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_task_comments')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_task_comments')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'view_task_notes')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_task_notes')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_task_notes')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_task_notes')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'task_labels')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'change_status')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'send_reminder')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_status')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_product_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_product_sub_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_tax')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_lead_agents')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_lead_agent')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_lead_agent')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_lead_agent')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'view_lead_category')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_lead_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_lead_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'delete_lead_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_lead_custom_forms')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_lead_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_lead_files')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_lead_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_lead_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_lead_follow_up')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_lead_follow_up')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_lead_follow_up')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_lead_follow_up')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_lead_sources')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_lead_sources')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_lead_sources')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_lead_sources')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_lead_proposals')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_lead_proposals')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_lead_proposals')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_lead_proposals')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'manage_expense_category')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'approve_timelogs')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_active_timelogs')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_contract_type')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'renew_contract')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'add_contract_discussion')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'edit_contract_discussion')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'view_contract_discussion')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_contract_discussion')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'add_contract_files')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_contract_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'delete_contract_files')->update(['allowed_permissions' => '{"all":4, "added":1, "none":5}']);
+        Permission::where('name', 'edit_attendance')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_attendance')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'manage_attendance')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'manage_ticket_type')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_ticket_agent')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'manage_ticket_channel')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_ticket_tags')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'add_client_note')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_client_note')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_client_note')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_client_note')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'manage_salary_payment_method')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_salary_component')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_salary_group')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_salary_tds')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_employee_salary')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'add_project_note')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_project_note')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'edit_project_note')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'delete_project_note')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'manage_project_template')->update(['allowed_permissions' => '{"all":4, "added":1, "owned":2,"both":3, "none":5}']);
+        Permission::where('name', 'view_task_report')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_time_log_report')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'finance')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_income_expense_report')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_leave_report')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'view_attendance_report')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_company_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_app_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_notification_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_currency_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_payment_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_finance_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_ticket_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_project_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_attendance_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_leave_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_custom_field_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_message_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_storage_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_language_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_lead_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_time_log_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_task_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_social_login_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_security_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_gdpr_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+        Permission::where('name', 'manage_theme_setting')->update(['allowed_permissions' => '{"all":4, "none":5}']);
+    }
+
+    /**
+     * Reverse the migrations.
+     *
+     * @return void
+     */
+    public function down()
+    {
+        //
+    }
+
+}
